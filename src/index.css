@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game--area {
+  width: 700px;
+  height: 300px;
+  border: 1px solid;
+  position: relative;
+  background: green;
+}
+
+.game--area--left {
+  position: absolute;
+  left: 0;
+  height: 100px;
+  width: 30px;
+  border: 1px solid white;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.game--area--right {
+  position: absolute;
+  right: 0;
+  height: 100px;
+  width: 30px;
+  border: 1px solid white;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.game--area--center {
+  position: absolute;
+  width: 0px;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border-right: 1px solid white;
+}
+
+.game--area--ball {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.game--area--home {
+  position: absolute;
+  border: 1px solid;
+  top: -60px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.game--area--away {
+  position: absolute;
+  border: 1px solid;
+  top: -60px;
+  right: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.game--area-buttons{
+  position: absolute;
+  width: 100%;
+  bottom: -70px;
+}
+
+.buttons{
+  width: 100px;
+  border-radius: 5px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+
+.buttons:hover{
+  background: green;
+  color: white;
+}
+
+.game--area-buttons button{
+  width: calc(100%/3);
+}
+.game--area-buttons button:first-of-type{
+  width: 100%;
+}
