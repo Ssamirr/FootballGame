@@ -9,7 +9,7 @@ function Match() {
 
     const moveTop = () => {
         setMoveBallY(() => {
-            if (moveBallY == 5) {
+            if (moveBallY === 5) {
                 return moveBallY;
             } else {
                 return moveBallY - 5;
@@ -19,7 +19,7 @@ function Match() {
 
     const moveDown = () => {
         setMoveBallY(() => {
-            if (moveBallY == 95) {
+            if (moveBallY === 95) {
                 return moveBallY;
             } else {
                 return moveBallY + 5;
@@ -29,7 +29,7 @@ function Match() {
 
     const moveLeft = () => {
         setMoveBallX(() => {
-            if (moveBallX == 2) {
+            if (moveBallX === 2) {
                 setMoveBallY(50);
                 setScoreData({ ...scoreData, away: scoreData.away + 1 })
                 return 50;
@@ -41,7 +41,7 @@ function Match() {
 
     const moveRight = () => {
         setMoveBallX(() => {
-            if (moveBallX == 98) {
+            if (moveBallX === 98) {
                 setScoreData({ ...scoreData, home: scoreData.home + 1 })
                 setMoveBallY(50);
                 return 50;
